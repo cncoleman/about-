@@ -11,8 +11,6 @@ format:
     template-partials: 
       - template/title-block.html
 # do not edit ends
-filters:
-   - lightbox
 lightbox: auto
 title: "A Decade of CESTA Data"
 session: "Spring 2024"
@@ -31,7 +29,7 @@ project-description: "This is project undertaken by the 2023-2024 Fellows cohort
 ---
 # CESTA's Web Presence
 
-This article focuses on the authoring capablities of Quarto. This article is written using [Quarto's Markdown](https://quarto.org/docs/authoring/markdown-basics.html). All the quarto markdown tags are supported for authoring the article. Please refer to the Quarto's official documentation for the available markdown options. Quarto allows a variety of features such using figures, tables, diagrams, videos, embeds, code annotations and more. It allows the authors to run Python scripts and embed the output in the article.
+::: {layout-nrow=1 layout-valign="bottom"}
 
 ![June 2012](data/imgs/June_2012.png){group="website"}
 
@@ -43,134 +41,98 @@ This article focuses on the authoring capablities of Quarto. This article is wri
 
 ![December 2019](data/imgs/December_2019.png){group="website"}
 
-![May 2020](data/imgs/May_2020.png){group="website"}
-
 ![May 2022](data/imgs/May_2022.png){group="website"}
 
-
-### Callouts
-
-Quarto allows different types of callouts to emphasize the content.
-
-::: {.callout-note}
-Note that there are five types of callouts, including:
-`note`, `warning`, `important`, `tip`, and `caution`.
 :::
 
-::: {.callout-tip}
-## Tip with Title
-This is an example of a callout with a title.
-:::
-
-::: {.callout-caution collapse="true"}
-## Expand To Learn About Collapse
-This is an example of a 'folded' caution callout that can be expanded by the user. You can use `collapse="true"` to collapse it by default or `collapse="false"` to make a collapsible callout that is expanded by default.
-:::
+## What is CESTA?
 
 
-### Figures
-In Quarto, figures can be easily imported using the markdown syntax, given the image is stored in the codebase. You can see the example given below.
-
-![This is an example image](data/imgs/placeholder.jpg)
-
-Below is a full column image.
-
-:::{.column-page}
-![](data/imgs/placeholder.jpg)
-:::
+*2014*
+<p class="change">"The Center for Spatial and Textual Analysis (CESTA) is comprised of the Spatial History Project, Humanities+Design, and the Literary Lab. This interdisciplinary collective of labs operates independently of any one particular home department, and is organizationally housed within the Dean of Research at Stanford University."</p>
 
 
-
-### Tables
-In Quarto, tables can be easily created using the pipe table markdown syntax. You can see the example given below.
-
-| Default | Left | Right | Center |
-|---------|:-----|------:|:------:|
-| 12      | 12   |    12 |   12   |
-| 123     | 123  |   123 |  123   |
-| 1       | 1    |     1 |   1    |
-
-: Demonstration of pipe table syntax
+*2015*
+<p class="change">"The Center for Spatial and Textual Analysis (CESTA) is comprised of the Spatial History Project, Humanities+Design, and the Literary Lab <marka>, the Poetic Media Lab, as well as Text Technologies and Chinese Railroad Workers</marka>. This interdisciplinary collective of labs operates independently of any one particular home department, and is organizationally housed within the Dean of Research at Stanford University."</p>
 
 
-### Diagrams
-Quarto allows natively the authors to create diagrams using Mermaid and Graphviz. Check the [official documentation](https://quarto.org/docs/authoring/diagrams.html) for more details.
-
-Below is an example of a Mermaid diagram.
-```{mermaid}
-flowchart LR
-  A[Hard edge] --> B(Round edge)
-  B --> C{Decision}
-  C --> D[Result one]
-  C --> E[Result two]
-```
-
-### Videos
-In Quarto, videos can be embedded from both locally and remote sources such as YouTube and Vimeo.
-{{< video https://www.youtube.com/embed/wo9vZccmqwc >}}
-
-### Appendices and Footnotes
-Quarto allows the authors to create appendices and footnotes easily.
-
-#### Appendix
-In Quarto, appendices can be created using the `.appendix` class. The appendix section is placed at the end of the document and is not included in the table of contents.
-
-##### Appendix Example {.appendix}
-Here is an example of an appendix.
-
-#### Footnote
-Here is a footnote reference,[^1] and another.[^longnote]
-
-[^1]: Here is the footnote.
-
-[^longnote]: Here's one with multiple blocks.
-
-    Subsequent paragraphs are indented to show that they
-belong to the previous footnote.
-
-    The whole paragraph can be indented, or just the first
-    line.  In this way, multi-paragraph footnotes work like
-    multi-paragraph list items.
+*2016*
+<p class="change"><marka>"Stanford’s internationally-renowned</marka> Center for Spatial and Textual Analysis (CESTA) is <marka>a pioneering research hub, where we use and critique digital tools and methods to create new knowledge in cross-disciplinary humanistic inquiry. We are a community of researchers committed to collaborative, open, inclusive, and ethical scholarship setting a standard for best practice in all our endeavors."</marka></p>
 
 
+*2018*
+<p class="change"><marka>"CESTA: Applying technologies across the Humanities and Social Sciences to enhance our understanding of the world</marka></p>
+<p class="change">Stanford’s internationally-renowned Center for Spatial and Textual Analysis (CESTA) <marka>is a premier research Center in the Digital Humanities. It</marka> is a pioneering research hub, where we <marka>apply digital tools and methods to create new knowledge in interdisciplinary humanistic inquiry, changing our understanding of the world, and setting a standard for best practice</marka> in all our endeavors."</p>
+
+*2020*
+<p class="change">"CESTA <marka>is an </marka>internationally<marka> </marka>renowned <marka>digital humanities center based in Wallenberg Hall at Stanford University. We are a diverse community of faculty, students, researchers, and practitioners. Through collaboration with partners across campus, across the Americas, and across the world, our research investigates pressing questions about human history, experience and endeavor. We explore places, global spaces, texts, textual artefacts, data visualization, digital curation, preservation and display, linked data and interoperability, and sustainability. As a scholarly community CESTA supports and encourages cutting-edge work across the humanities and the interpretative social sciences.</marka></p>
+
+<p class="change"><marka>CESTA is committed to collaborative, open, inclusive, and ethical scholarship. We seek to set</marka> a standard for best practices in all our endeavors.<marka> We encourage experimentation, flexible thinking, and productive risk-taking in the pursuit of excellence in digital research. Through our major research projects, fellowship and assistantship programs, seminars, workshops and informal initiatives, CESTA is dedicated to nurturing, training and professionalizing scholars of the future from a variety of disciplines, who will learn how to ask and answer data-driven questions focused on cultural, environmental, historical, social, and textual issues."</marka></p>
+
+<style>
+/* https://max.hn/thoughts/how-to-create-a-highlighter-marker-effect-in-css */
+p.change markr {
+  margin: 0 -0.2em;
+  padding: 0.1em 0.2em;
+  border-radius: 0.8em 0.3em;
+  background: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 225, 0, 0.1),
+    rgba(255, 225, 0, 0.7) 4%,
+    rgba(255, 225, 0, 0.3)
+  );
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+p.change {
+  font-size: .75em;
+  line-height: 1.25em;
+}
+
+p.change marka {
+  /* margin: 0;*/
+  /*padding: 0.6em;*/
+  margin: 0 -0.2em;
+  padding: 0.1em 0.2em;
+
+  border-radius: 7.5px;
+  background: linear-gradient(
+    104deg, 
+    rgba(130, 255, 173, 0) 0.9%, 
+    rgba(130, 255, 173, 1.25) 2.4%, 
+    rgba(130, 255, 173, 0.5) 5.8%, 
+    rgba(130, 255, 173, 0.1) 93%, 
+    rgba(130, 255, 173, 0.7) 96%, 
+    rgba(130, 255, 1732, 0) 98%
+  ), 
+  linear-gradient(
+    183deg, 
+    rgba(130, 255, 173,0) 0%, 
+    rgba(130, 255, 173,0.3) 7.9%, 
+    rgba(130, 255, 173,0) 15%
+  );
+  text-shadow: -12px 12px 9.8px rgba(130, 255, 173, 0.7), 
+    21px -18.1px 7.3px rgba(255, 255, 255, 1), 
+    -18.1px -27.3px 30px rgba(255, 255, 255, 1);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+</style>
 
 
-# Title of Article 2
-:::{.article-author}
-Flora Yuan
-:::
+: Changes in how CESTA has been described on the website over the years. {.striped .hover .sm}
 
-This article focuses on the computational capabilities of Quarto.  
+| Year | Total words | Differences | Insertions | Deletions |
+|------|:-----:|:------:|:------:|:------:|
+| 2014  |   45  |     |     |     |
+| 2015  |   59  | 2   |    1 |   1   |
+| 2016 |   55  | 8  |   4 |  4   |
+| 2018 |   72  | 14  |  7 |   7    |
+| 2020 |   178  | 12  |  7 |   5    |
 
 
-## Visualizations
-Quarto allows the users to run Python and R code directly in the page and get their output. This means that cool and interactive visualizations generated using Python or R can be rendered directly in the page. Please ensure that the essential library dependencies are installed to render the visualizations. For example, the following visualization requires `plotly` library which is installed along with the requirements. Whenever you install a new library, don't forget to add it to `requirements.txt`.
 
-Whenever an interactive visualization is added, an equivalent static image alternative should also be added for the Anthology print version. Refer to the code below.
 
-The content below will appear only in the html version.
-
-::: {.content-visible when-format="html"}
-### Interactive Plotly Chart
-For a demonstration of a Plotly chart, see @fig-example.
-
-```{python}
-#| label: fig-example
-#| fig-cap: Example Interactive Plotly Chart
-import plotly.express as px
-df = px.data.iris()
-fig = px.scatter(df, x="sepal_width", y="sepal_length", color="species",
-                 size='petal_length', hover_data=['petal_width'])
-fig.show()
-```
-:::
-
-The content below will appear only in the pdf output but not in the html version.
-
-::: {.content-visible when-format="pdf"}
-The below content will appear only in PDF format.
-![](data/imgs/placeholder.jpg)
-:::
-
-## Observable
-Similar to Python and R code, Quarto is also capable of handling Observable. Please refer to the [official documentation](https://quarto.org/docs/computations/ojs.html) for more details.
+## People

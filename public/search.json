@@ -1,23 +1,16 @@
 [
   {
-    "objectID": "index.html#visualizations",
-    "href": "index.html#visualizations",
+    "objectID": "index.html#what-is-cesta",
+    "href": "index.html#what-is-cesta",
     "title": "A Decade of CESTA Data",
-    "section": "Visualizations",
-    "text": "Visualizations\n  Quarto allows the users to run Python and R code directly in the page and get their output. This means that cool and interactive visualizations generated using Python or R can be rendered directly in the page. Please ensure that the essential library dependencies are installed to render the visualizations. For example, the following visualization requires plotly library which is installed along with the requirements. Whenever you install a new library, don’t forget to add it to requirements.txt.\n  Whenever an interactive visualization is added, an equivalent static image alternative should also be added for the Anthology print version. Refer to the code below.\n  The content below will appear only in the html version.\n  \n  Interactive Plotly Chart\n  For a demonstration of a Plotly chart, see Figure 1.\n  \n  \n  \n\n                                                  \n  Figure 1: Example Interactive Plotly Chart\n  \n  \n  \n  The content below will appear only in the pdf output but not in the html version."
+    "section": "What is CESTA?",
+    "text": "What is CESTA?\n  2014\n  \n  “The Center for Spatial and Textual Analysis (CESTA) is comprised of the Spatial History Project, Humanities+Design, and the Literary Lab. This interdisciplinary collective of labs operates independently of any one particular home department, and is organizationally housed within the Dean of Research at Stanford University.”\n  \n  2015\n  \n  “The Center for Spatial and Textual Analysis (CESTA) is comprised of the Spatial History Project, Humanities+Design, and the Literary Lab , the Poetic Media Lab, as well as Text Technologies and Chinese Railroad Workers. This interdisciplinary collective of labs operates independently of any one particular home department, and is organizationally housed within the Dean of Research at Stanford University.”\n  \n  2016\n  \n  “Stanford’s internationally-renowned Center for Spatial and Textual Analysis (CESTA) is a pioneering research hub, where we use and critique digital tools and methods to create new knowledge in cross-disciplinary humanistic inquiry. We are a community of researchers committed to collaborative, open, inclusive, and ethical scholarship setting a standard for best practice in all our endeavors.”\n  \n  2018\n  \n  “CESTA: Applying technologies across the Humanities and Social Sciences to enhance our understanding of the world\n  \n  \n  Stanford’s internationally-renowned Center for Spatial and Textual Analysis (CESTA) is a premier research Center in the Digital Humanities. It is a pioneering research hub, where we apply digital tools and methods to create new knowledge in interdisciplinary humanistic inquiry, changing our understanding of the world, and setting a standard for best practice in all our endeavors.”\n  \n  2020\n  \n  “CESTA is an internationally renowned digital humanities center based in Wallenberg Hall at Stanford University. We are a diverse community of faculty, students, researchers, and practitioners. Through collaboration with partners across campus, across the Americas, and across the world, our research investigates pressing questions about human history, experience and endeavor. We explore places, global spaces, texts, textual artefacts, data visualization, digital curation, preservation and display, linked data and interoperability, and sustainability. As a scholarly community CESTA supports and encourages cutting-edge work across the humanities and the interpretative social sciences.\n  \n  \n  CESTA is committed to collaborative, open, inclusive, and ethical scholarship. We seek to set a standard for best practices in all our endeavors. We encourage experimentation, flexible thinking, and productive risk-taking in the pursuit of excellence in digital research. Through our major research projects, fellowship and assistantship programs, seminars, workshops and informal initiatives, CESTA is dedicated to nurturing, training and professionalizing scholars of the future from a variety of disciplines, who will learn how to ask and answer data-driven questions focused on cultural, environmental, historical, social, and textual issues.”\n  \n  \n  \n  Changes in how CESTA has been described on the website over the years.\n  \n  \n  Year\n  Total words\n  Differences\n  Insertions\n  Deletions\n  \n  \n  \n  \n  2014\n  45\n  \n  \n  \n  \n  \n  2015\n  59\n  2\n  1\n  1\n  \n  \n  2016\n  55\n  8\n  4\n  4\n  \n  \n  2018\n  72\n  14\n  7\n  7\n  \n  \n  2020\n  178\n  12\n  7\n  5"
   },
   {
-    "objectID": "index.html#observable",
-    "href": "index.html#observable",
+    "objectID": "index.html#people",
+    "href": "index.html#people",
     "title": "A Decade of CESTA Data",
-    "section": "Observable",
-    "text": "Observable\n  Similar to Python and R code, Quarto is also capable of handling Observable. Please refer to the official documentation for more details."
-  },
-  {
-    "objectID": "index.html#footnotes",
-    "href": "index.html#footnotes",
-    "title": "A Decade of CESTA Data",
-    "section": "Footnotes",
-    "text": "Footnotes\n  \n  \n  Here is the footnote.↩︎\n  Here’s one with multiple blocks.\n  Subsequent paragraphs are indented to show that they belong to the previous footnote.\n  The whole paragraph can be indented, or just the first line. In this way, multi-paragraph footnotes work like multi-paragraph list items.↩︎"
+    "section": "People",
+    "text": "People\n  \n  \n  \n  June 2012\n  April 2014\n  November 2016\n  December 2017\n  December 2019\n  May 2022"
   }
 ]
