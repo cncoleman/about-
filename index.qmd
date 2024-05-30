@@ -11,29 +11,41 @@ format:
     template-partials: 
       - template/title-block.html
 # do not edit ends
-title: "Anthology Article Template"
-session: "Summer 2023"
+filters:
+   - lightbox
+lightbox: auto
+title: "A Decade of CESTA Data"
+session: "Spring 2024"
 jupyter: python3
 image: "data/imgs/placeholder.jpg"
 project-members:
-  - name: Dr. Jane Doe
-    designation: Faculty Director of Department
+  - name: Nicole Coleman
+    designation: Director, Digital Research Fellows Program
     orcid: https://orcid.org/0000-0002-3360-1975
-  - name: John Doe
-    designation: Intern - Summer, 2023
-    orcid: https://orcid.org/0000-0002-3360-1975
+  - name: Merve Tekgurler
+    designation: Senior Fellow, Digital Research Fellows Program
+    orcid: 
 
-project-description: "The project Description contains few lines of description about the project. The description should be succint and give the reader a brief overview of what they could expect in the article. The project description can span from 4-5 lines and it is expected to capture the complete essence of the project. This article page comprises of two sub-articles related to the group. The article 1 focuses on the authoring capabilites of quarto and article 2 focuses on the computational capabilities. This article page is made using Quarto."
+project-description: "This is project undertaken by the 2023-2024 Fellows cohort to explore data available as digital traces of CESTA. The sources are the events listing on the CESTA website, earlier events scraped from the Internet Archive's web archive of CESTA's online presence, and CESTA's newsletter archive from the Mailchimp application."
 
 ---
-# Title of Article 1
-:::{.article-author}
-John Doe
-:::
+# CESTA's Web Presence
+
 This article focuses on the authoring capablities of Quarto. This article is written using [Quarto's Markdown](https://quarto.org/docs/authoring/markdown-basics.html). All the quarto markdown tags are supported for authoring the article. Please refer to the Quarto's official documentation for the available markdown options. Quarto allows a variety of features such using figures, tables, diagrams, videos, embeds, code annotations and more. It allows the authors to run Python scripts and embed the output in the article.
 
-## Authoring features of Quarto
-In this section, let's see some of the authoring features of Quarto.
+![June 2012](data/imgs/June_2012.png){group="website"}
+
+![April 2014](data/imgs/April_2014.png){group="website"}
+
+![November 2016](data/imgs/November_2016.png){group="website"}
+
+![December 2017](data/imgs/December_2017.png){group="website"}
+
+![December 2019](data/imgs/December_2019.png){group="website"}
+
+![May 2020](data/imgs/May_2020.png){group="website"}
+
+![May 2022](data/imgs/May_2022.png){group="website"}
 
 
 ### Callouts
@@ -125,7 +137,7 @@ belong to the previous footnote.
 
 # Title of Article 2
 :::{.article-author}
-Joe Doe
+Flora Yuan
 :::
 
 This article focuses on the computational capabilities of Quarto.  
