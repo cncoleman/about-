@@ -15,7 +15,7 @@ lightbox: auto
 title: "A Decade of CESTA Data"
 session: "Spring 2024"
 jupyter: python3
-image: "data/imgs/placeholder.jpg"
+image: "data/imgs/CESTA_directors.jpeg"
 project-members:
   - name: Nicole Coleman
     designation: Director, Digital Research Fellows Program
@@ -302,9 +302,10 @@ visualization = beeswarm(data, "Date", "Method")
 </style>
 
 ## A CESTA Event Network
-[Link to the full screen visualization](https://www.junyitao.com/research/external_htmls/cesta_event_vis/)
+Junyi Tao produced this network visualization to show individuals connected through events based on data gathered and wrangled by Merve Tekgurler.
 
 
 ```{=html}
 <iframe src="https://www.junyitao.com/research/external_htmls/cesta_event_vis/" width="800" height="800"></iframe>
 ```
+
