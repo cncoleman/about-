@@ -19,6 +19,40 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
   </style>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cesta-online/anthology-assets@latest/css/style.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cesta-online/anthology-assets@latest/css/style-quarto.css">
@@ -69,6 +103,8 @@
         "search-label": "Search"
       }
     }</script>
+    <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+    <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
   
   
   </head>
@@ -88,7 +124,7 @@
       <li><a href="#cestas-web-presence" id="toc-cestas-web-presence" class="nav-link active" data-scroll-target="#cestas-web-presence">CESTA’s Web Presence</a>
       <ul class="collapse">
       <li><a href="#what-is-cesta" id="toc-what-is-cesta" class="nav-link" data-scroll-target="#what-is-cesta">What is CESTA?</a></li>
-      <li><a href="#people" id="toc-people" class="nav-link" data-scroll-target="#people">People</a></li>
+      <li><a href="#events-over-the-years" id="toc-events-over-the-years" class="nav-link" data-scroll-target="#events-over-the-years">Events Over the Years</a></li>
       </ul></li>
       </ul>
     </nav>
@@ -134,7 +170,7 @@
   <div class="quarto-layout-cell" style="flex-basis: 16.7%;justify-content: flex-start;">
   <div class="quarto-figure quarto-figure-center">
   <figure class="figure">
-  <p><a href="data/imgs/June_2012.png" class="lightbox" data-gallery="website" data-glightbox="description: .lightbox-desc-1" title="June 2012"><img src="data/imgs/June_2012.png" class="img-fluid figure-img" alt="June 2012"></a></p>
+  <p><a href="data/imgs/June_2012.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="website" title="June 2012"><img src="data/imgs/June_2012.png" class="img-fluid figure-img" alt="June 2012"></a></p>
   <figcaption>June 2012</figcaption>
   </figure>
   </div>
@@ -142,7 +178,7 @@
   <div class="quarto-layout-cell" style="flex-basis: 16.7%;justify-content: flex-start;">
   <div class="quarto-figure quarto-figure-center">
   <figure class="figure">
-  <p><a href="data/imgs/April_2014.png" class="lightbox" data-gallery="website" data-glightbox="description: .lightbox-desc-2" title="April 2014"><img src="data/imgs/April_2014.png" class="img-fluid figure-img" alt="April 2014"></a></p>
+  <p><a href="data/imgs/April_2014.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="website" title="April 2014"><img src="data/imgs/April_2014.png" class="img-fluid figure-img" alt="April 2014"></a></p>
   <figcaption>April 2014</figcaption>
   </figure>
   </div>
@@ -150,7 +186,7 @@
   <div class="quarto-layout-cell" style="flex-basis: 16.7%;justify-content: flex-start;">
   <div class="quarto-figure quarto-figure-center">
   <figure class="figure">
-  <p><a href="data/imgs/November_2016.png" class="lightbox" data-gallery="website" data-glightbox="description: .lightbox-desc-3" title="November 2016"><img src="data/imgs/November_2016.png" class="img-fluid figure-img" alt="November 2016"></a></p>
+  <p><a href="data/imgs/November_2016.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="website" title="November 2016"><img src="data/imgs/November_2016.png" class="img-fluid figure-img" alt="November 2016"></a></p>
   <figcaption>November 2016</figcaption>
   </figure>
   </div>
@@ -158,7 +194,7 @@
   <div class="quarto-layout-cell" style="flex-basis: 16.7%;justify-content: flex-start;">
   <div class="quarto-figure quarto-figure-center">
   <figure class="figure">
-  <p><a href="data/imgs/December_2017.png" class="lightbox" data-gallery="website" data-glightbox="description: .lightbox-desc-4" title="December 2017"><img src="data/imgs/December_2017.png" class="img-fluid figure-img" alt="December 2017"></a></p>
+  <p><a href="data/imgs/December_2017.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="website" title="December 2017"><img src="data/imgs/December_2017.png" class="img-fluid figure-img" alt="December 2017"></a></p>
   <figcaption>December 2017</figcaption>
   </figure>
   </div>
@@ -166,7 +202,7 @@
   <div class="quarto-layout-cell" style="flex-basis: 16.7%;justify-content: flex-start;">
   <div class="quarto-figure quarto-figure-center">
   <figure class="figure">
-  <p><a href="data/imgs/December_2019.png" class="lightbox" data-gallery="website" data-glightbox="description: .lightbox-desc-5" title="December 2019"><img src="data/imgs/December_2019.png" class="img-fluid figure-img" alt="December 2019"></a></p>
+  <p><a href="data/imgs/December_2019.png" class="lightbox" data-glightbox="description: .lightbox-desc-5" data-gallery="website" title="December 2019"><img src="data/imgs/December_2019.png" class="img-fluid figure-img" alt="December 2019"></a></p>
   <figcaption>December 2019</figcaption>
   </figure>
   </div>
@@ -174,7 +210,7 @@
   <div class="quarto-layout-cell" style="flex-basis: 16.7%;justify-content: flex-start;">
   <div class="quarto-figure quarto-figure-center">
   <figure class="figure">
-  <p><a href="data/imgs/May_2022.png" class="lightbox" data-gallery="website" data-glightbox="description: .lightbox-desc-6" title="May 2022"><img src="data/imgs/May_2022.png" class="img-fluid figure-img" alt="May 2022"></a></p>
+  <p><a href="data/imgs/May_2022.png" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="website" title="May 2022"><img src="data/imgs/May_2022.png" class="img-fluid figure-img" alt="May 2022"></a></p>
   <figcaption>May 2022</figcaption>
   </figure>
   </div>
@@ -310,8 +346,198 @@
   </tbody>
   </table>
   </section>
-  <section id="people" class="level2">
-  <h2 class="anchored" data-anchor-id="people">People</h2>
+  <section id="events-over-the-years" class="level2">
+  <h2 class="anchored" data-anchor-id="events-over-the-years">Events Over the Years</h2>
+  <div class="cell">
+  <details class="code-fold hidden">
+  <summary>Code</summary>
+  <div class="sourceCode cell-code hidden" id="cb1" data-startfrom="139" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 138;"><span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>dataFile <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data/combinedv10.csv"</span>)<span class="op">.</span><span class="fu">csv</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+  </details>
+  <div class="cell-output cell-output-display">
+  <div id="ojs-cell-1" data-nodetype="declaration">
+
+  </div>
+  </div>
+  </div>
+  <div class="cell">
+  <details class="code-fold hidden">
+  <summary>Code</summary>
+  <div class="sourceCode cell-code hidden" id="cb2" data-startfrom="143" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 142;"><span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a>parseDate <span class="op">=</span> d3<span class="op">.</span><span class="fu">timeParse</span>(<span class="st">"%Y-%m-%d"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+  </details>
+  <div class="cell-output cell-output-display">
+  <div id="ojs-cell-2" data-nodetype="declaration">
+
+  </div>
+  </div>
+  </div>
+  <div class="cell">
+  <details class="code-fold hidden">
+  <summary>Code</summary>
+  <div class="sourceCode cell-code hidden" id="cb3" data-startfrom="147" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 146;"><span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> dataFile<span class="op">.</span><span class="fu">map</span>((d) <span class="kw">=&gt;</span> {</span>
+<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> {</span>
+<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span>d<span class="op">,</span></span>
+<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Date</span><span class="op">:</span> <span class="fu">parseDate</span>(d<span class="op">.</span><span class="at">Date</span>)</span>
+<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+  </details>
+  <div class="cell-output cell-output-display">
+  <div id="ojs-cell-3" data-nodetype="declaration">
+
+  </div>
+  </div>
+  </div>
+  <div class="cell">
+  <details class="code-fold hidden">
+  <summary>Code</summary>
+  <div class="sourceCode cell-code hidden" id="cb4" data-startfrom="155" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 154;"><span id="cb4-155"><a href="#cb4-155" aria-hidden="true" tabindex="-1"></a>d3 <span class="op">=</span> <span class="pp">require</span>(<span class="st">"d3@v6"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+  </details>
+  <div class="cell-output cell-output-display">
+  <div id="ojs-cell-4" data-nodetype="declaration">
+
+  </div>
+  </div>
+  </div>
+  <div class="cell">
+  <details class="code-fold hidden">
+  <summary>Code</summary>
+  <div class="sourceCode cell-code hidden" id="cb5" data-startfrom="159" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 158;"><span id="cb5-159"><a href="#cb5-159" aria-hidden="true" tabindex="-1"></a>beeswarm <span class="op">=</span> (data<span class="op">,</span> date<span class="op">,</span> type) <span class="kw">=&gt;</span> {</span>
+<span id="cb5-160"><a href="#cb5-160" aria-hidden="true" tabindex="-1"></a>  <span class="co">////// Chart configuration</span></span>
+<span id="cb5-161"><a href="#cb5-161" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> radius <span class="op">=</span> <span class="fl">2.5</span><span class="op">;</span></span>
+<span id="cb5-162"><a href="#cb5-162" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> padding <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb5-163"><a href="#cb5-163" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> size <span class="op">=</span> { <span class="dt">w</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span> <span class="dt">h</span><span class="op">:</span> <span class="dv">800</span> }<span class="op">;</span></span>
+<span id="cb5-164"><a href="#cb5-164" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> margin <span class="op">=</span> { <span class="dt">top</span><span class="op">:</span> <span class="dv">100</span><span class="op">,</span> <span class="dt">bottom</span><span class="op">:</span> <span class="dv">30</span><span class="op">,</span> <span class="dt">left</span><span class="op">:</span> <span class="dv">130</span><span class="op">,</span> <span class="dt">right</span><span class="op">:</span> <span class="dv">100</span> }<span class="op">;</span></span>
+<span id="cb5-165"><a href="#cb5-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-166"><a href="#cb5-166" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> colors <span class="op">=</span> <span class="st">"#e6ab02"</span><span class="op">;</span></span>
+<span id="cb5-167"><a href="#cb5-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-168"><a href="#cb5-168" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> xScale <span class="op">=</span> d3</span>
+<span id="cb5-169"><a href="#cb5-169" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">scaleTime</span>()</span>
+<span id="cb5-170"><a href="#cb5-170" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> size<span class="op">.</span><span class="at">w</span>])</span>
+<span id="cb5-171"><a href="#cb5-171" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">domain</span>(d3<span class="op">.</span><span class="fu">extent</span>(data<span class="op">,</span> (d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">Date</span>))<span class="op">;</span></span>
+<span id="cb5-172"><a href="#cb5-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-173"><a href="#cb5-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-174"><a href="#cb5-174" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> category <span class="op">=</span> [<span class="op">...</span><span class="kw">new</span> <span class="bu">Set</span>(data<span class="op">.</span><span class="fu">map</span>((d) <span class="kw">=&gt;</span> d[type]))]<span class="op">;</span></span>
+<span id="cb5-175"><a href="#cb5-175" aria-hidden="true" tabindex="-1"></a>  category<span class="op">.</span><span class="fu">reverse</span>()<span class="op">;</span></span>
+<span id="cb5-176"><a href="#cb5-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-177"><a href="#cb5-177" aria-hidden="true" tabindex="-1"></a>  <span class="co">////// Chart drawing</span></span>
+<span id="cb5-178"><a href="#cb5-178" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> svg <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(</span>
+<span id="cb5-179"><a href="#cb5-179" aria-hidden="true" tabindex="-1"></a>    DOM<span class="op">.</span><span class="fu">svg</span>(</span>
+<span id="cb5-180"><a href="#cb5-180" aria-hidden="true" tabindex="-1"></a>      size<span class="op">.</span><span class="at">w</span> <span class="op">+</span> margin<span class="op">.</span><span class="at">left</span> <span class="op">+</span> margin<span class="op">.</span><span class="at">right</span><span class="op">,</span></span>
+<span id="cb5-181"><a href="#cb5-181" aria-hidden="true" tabindex="-1"></a>      size<span class="op">.</span><span class="at">h</span> <span class="op">+</span> margin<span class="op">.</span><span class="at">top</span> <span class="op">+</span> margin<span class="op">.</span><span class="at">bottom</span></span>
+<span id="cb5-182"><a href="#cb5-182" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb5-183"><a href="#cb5-183" aria-hidden="true" tabindex="-1"></a>  )<span class="op">;</span></span>
+<span id="cb5-184"><a href="#cb5-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-185"><a href="#cb5-185" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> g <span class="op">=</span> svg</span>
+<span id="cb5-186"><a href="#cb5-186" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">append</span>(<span class="st">"g"</span>)</span>
+<span id="cb5-187"><a href="#cb5-187" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">attr</span>(<span class="st">"transform"</span><span class="op">,</span> <span class="vs">`translate(</span><span class="sc">${</span>margin<span class="op">.</span><span class="at">left</span><span class="sc">}</span><span class="vs">, </span><span class="sc">${</span>margin<span class="op">.</span><span class="at">top</span><span class="sc">}</span><span class="vs">)`</span>)<span class="op">;</span></span>
+<span id="cb5-188"><a href="#cb5-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-189"><a href="#cb5-189" aria-hidden="true" tabindex="-1"></a>  <span class="co">// x axis</span></span>
+<span id="cb5-190"><a href="#cb5-190" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> xAxis <span class="op">=</span> d3<span class="op">.</span><span class="fu">axisBottom</span>()<span class="op">.</span><span class="fu">scale</span>(xScale)<span class="op">.</span><span class="fu">ticks</span>(d3<span class="op">.</span><span class="at">timeYear</span>)<span class="op">;</span></span>
+<span id="cb5-191"><a href="#cb5-191" aria-hidden="true" tabindex="-1"></a>  g<span class="op">.</span><span class="fu">append</span>(<span class="st">"g"</span>)</span>
+<span id="cb5-192"><a href="#cb5-192" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">attr</span>(<span class="st">"transform"</span><span class="op">,</span> <span class="vs">`translate(0, </span><span class="sc">${</span>size<span class="op">.</span><span class="at">h</span> <span class="op">-</span> margin<span class="op">.</span><span class="at">top</span><span class="sc">}</span><span class="vs">)`</span>)</span>
+<span id="cb5-193"><a href="#cb5-193" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">call</span>(xAxis)</span>
+<span id="cb5-194"><a href="#cb5-194" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">select</span>(<span class="st">".domain"</span>)</span>
+<span id="cb5-195"><a href="#cb5-195" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">remove</span>()<span class="op">;</span></span>
+<span id="cb5-196"><a href="#cb5-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-197"><a href="#cb5-197" aria-hidden="true" tabindex="-1"></a>  <span class="co">// y scale</span></span>
+<span id="cb5-198"><a href="#cb5-198" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> yScale <span class="op">=</span> d3</span>
+<span id="cb5-199"><a href="#cb5-199" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">scalePoint</span>()</span>
+<span id="cb5-200"><a href="#cb5-200" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">domain</span>(category)</span>
+<span id="cb5-201"><a href="#cb5-201" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> size<span class="op">.</span><span class="at">h</span> <span class="op">-</span> margin<span class="op">.</span><span class="at">top</span> <span class="op">-</span> margin<span class="op">.</span><span class="at">bottom</span>])<span class="op">;</span></span>
+<span id="cb5-202"><a href="#cb5-202" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> yAxis <span class="op">=</span> d3<span class="op">.</span><span class="fu">axisLeft</span>()<span class="op">.</span><span class="fu">scale</span>(yScale)<span class="op">;</span></span>
+<span id="cb5-203"><a href="#cb5-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-204"><a href="#cb5-204" aria-hidden="true" tabindex="-1"></a>  g<span class="op">.</span><span class="fu">append</span>(<span class="st">"g"</span>)</span>
+<span id="cb5-205"><a href="#cb5-205" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">attr</span>(<span class="st">"transform"</span><span class="op">,</span> <span class="vs">`translate(0,0)`</span>)</span>
+<span id="cb5-206"><a href="#cb5-206" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">call</span>(yAxis)</span>
+<span id="cb5-207"><a href="#cb5-207" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">select</span>(<span class="st">".domain"</span>)</span>
+<span id="cb5-208"><a href="#cb5-208" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">remove</span>()<span class="op">;</span></span>
+<span id="cb5-209"><a href="#cb5-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-210"><a href="#cb5-210" aria-hidden="true" tabindex="-1"></a>  <span class="co">//Tooltip</span></span>
+<span id="cb5-211"><a href="#cb5-211" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> toolTip <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"body"</span>)<span class="op">.</span><span class="fu">append</span>(<span class="st">"div"</span>)<span class="op">.</span><span class="fu">attr</span>(<span class="st">"class"</span><span class="op">,</span> <span class="st">"toolTip"</span>)<span class="op">;</span></span>
+<span id="cb5-212"><a href="#cb5-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-213"><a href="#cb5-213" aria-hidden="true" tabindex="-1"></a>  <span class="co">// mouseover function</span></span>
+<span id="cb5-214"><a href="#cb5-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-215"><a href="#cb5-215" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> formatDate <span class="op">=</span> d3<span class="op">.</span><span class="fu">timeFormat</span>(<span class="st">"%d %b %Y"</span>)<span class="op">;</span></span>
+<span id="cb5-216"><a href="#cb5-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-217"><a href="#cb5-217" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">nodeMouseOver</span>(<span class="bu">event</span><span class="op">,</span> d) {</span>
+<span id="cb5-218"><a href="#cb5-218" aria-hidden="true" tabindex="-1"></a>    toolTip</span>
+<span id="cb5-219"><a href="#cb5-219" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">style</span>(<span class="st">"left"</span><span class="op">,</span> <span class="bu">event</span><span class="op">.</span><span class="at">pageX</span> <span class="op">+</span> <span class="dv">18</span> <span class="op">+</span> <span class="st">"px"</span>)</span>
+<span id="cb5-220"><a href="#cb5-220" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">style</span>(<span class="st">"top"</span><span class="op">,</span> <span class="bu">event</span><span class="op">.</span><span class="at">pageY</span> <span class="op">+</span> <span class="dv">18</span> <span class="op">+</span> <span class="st">"px"</span>)</span>
+<span id="cb5-221"><a href="#cb5-221" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">style</span>(<span class="st">"display"</span><span class="op">,</span> <span class="st">"block"</span>)</span>
+<span id="cb5-222"><a href="#cb5-222" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">html</span>(</span>
+<span id="cb5-223"><a href="#cb5-223" aria-hidden="true" tabindex="-1"></a>        <span class="vs">`</span><span class="sc">${</span>d[<span class="st">"Location"</span>]<span class="op">.</span><span class="fu">toUpperCase</span>()<span class="sc">}</span><span class="vs"> - &lt;em&gt;</span><span class="sc">${</span><span class="fu">formatDate</span>(</span>
+<span id="cb5-224"><a href="#cb5-224" aria-hidden="true" tabindex="-1"></a>          d[<span class="st">"Date"</span>]</span>
+<span id="cb5-225"><a href="#cb5-225" aria-hidden="true" tabindex="-1"></a>        )<span class="sc">}</span><span class="vs">&lt;/em&gt;&lt;br&gt;&lt;strong&gt;</span><span class="sc">${</span>d<span class="op">.</span><span class="at">Title</span><span class="sc">}</span><span class="vs">&lt;/strong&gt;&lt;br&gt;</span><span class="sc">${</span>d<span class="op">.</span><span class="at">Text</span><span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">200</span>)<span class="sc">}</span><span class="vs">...`</span></span>
+<span id="cb5-226"><a href="#cb5-226" aria-hidden="true" tabindex="-1"></a>      )<span class="op">;</span></span>
+<span id="cb5-227"><a href="#cb5-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-228"><a href="#cb5-228" aria-hidden="true" tabindex="-1"></a>    d3<span class="op">.</span><span class="fu">select</span>(<span class="bu">event</span><span class="op">.</span><span class="at">target</span>)<span class="op">.</span><span class="fu">style</span>(<span class="st">"cursor"</span><span class="op">,</span> <span class="st">"pointer"</span>)<span class="op">;</span></span>
+<span id="cb5-229"><a href="#cb5-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-230"><a href="#cb5-230" aria-hidden="true" tabindex="-1"></a>    d3<span class="op">.</span><span class="fu">select</span>(<span class="bu">event</span><span class="op">.</span><span class="at">target</span>)<span class="op">.</span><span class="fu">transition</span>()<span class="op">.</span><span class="fu">attr</span>(<span class="st">"fill"</span><span class="op">,</span> <span class="st">"#A8234E"</span>)<span class="op">.</span><span class="fu">attr</span>(<span class="st">"r"</span><span class="op">,</span> <span class="dv">10</span>)<span class="op">;</span></span>
+<span id="cb5-231"><a href="#cb5-231" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-232"><a href="#cb5-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-233"><a href="#cb5-233" aria-hidden="true" tabindex="-1"></a>  <span class="co">// mouseout function</span></span>
+<span id="cb5-234"><a href="#cb5-234" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">nodeMouseOut</span>(<span class="bu">event</span><span class="op">,</span> d) {</span>
+<span id="cb5-235"><a href="#cb5-235" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Hide tooltip on mouse out</span></span>
+<span id="cb5-236"><a href="#cb5-236" aria-hidden="true" tabindex="-1"></a>    toolTip<span class="op">.</span><span class="fu">style</span>(<span class="st">"display"</span><span class="op">,</span> <span class="st">"none"</span>)<span class="op">;</span> <span class="co">// Hide toolTip</span></span>
+<span id="cb5-237"><a href="#cb5-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-238"><a href="#cb5-238" aria-hidden="true" tabindex="-1"></a>    d3<span class="op">.</span><span class="fu">select</span>(<span class="bu">event</span><span class="op">.</span><span class="at">target</span>)<span class="op">.</span><span class="fu">style</span>(<span class="st">"cursor"</span><span class="op">,</span> <span class="st">"default"</span>)<span class="op">;</span></span>
+<span id="cb5-239"><a href="#cb5-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-240"><a href="#cb5-240" aria-hidden="true" tabindex="-1"></a>    d3<span class="op">.</span><span class="fu">select</span>(<span class="bu">event</span><span class="op">.</span><span class="at">target</span>)</span>
+<span id="cb5-241"><a href="#cb5-241" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">transition</span>()</span>
+<span id="cb5-242"><a href="#cb5-242" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"fill"</span><span class="op">,</span> <span class="st">"orange"</span>)</span>
+<span id="cb5-243"><a href="#cb5-243" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"r"</span><span class="op">,</span> radius)<span class="op">;</span></span>
+<span id="cb5-244"><a href="#cb5-244" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-245"><a href="#cb5-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-246"><a href="#cb5-246" aria-hidden="true" tabindex="-1"></a>  <span class="co">// circles</span></span>
+<span id="cb5-247"><a href="#cb5-247" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> bee <span class="op">=</span> g</span>
+<span id="cb5-248"><a href="#cb5-248" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">append</span>(<span class="st">"g"</span>)</span>
+<span id="cb5-249"><a href="#cb5-249" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">attr</span>(<span class="st">"class"</span><span class="op">,</span> <span class="st">"bee"</span>)</span>
+<span id="cb5-250"><a href="#cb5-250" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">attr</span>(<span class="st">"transform"</span><span class="op">,</span> <span class="vs">`translate(0,0)`</span>)<span class="op">;</span></span>
+<span id="cb5-251"><a href="#cb5-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-252"><a href="#cb5-252" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> nodes <span class="op">=</span> bee</span>
+<span id="cb5-253"><a href="#cb5-253" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">"circle"</span>)</span>
+<span id="cb5-254"><a href="#cb5-254" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">data</span>(data)</span>
+<span id="cb5-255"><a href="#cb5-255" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">enter</span>()</span>
+<span id="cb5-256"><a href="#cb5-256" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">append</span>(<span class="st">"circle"</span>)</span>
+<span id="cb5-257"><a href="#cb5-257" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">attr</span>(<span class="st">"class"</span><span class="op">,</span> <span class="st">"node"</span>)</span>
+<span id="cb5-258"><a href="#cb5-258" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">attr</span>(<span class="st">"cy"</span><span class="op">,</span> (d) <span class="kw">=&gt;</span> {</span>
+<span id="cb5-259"><a href="#cb5-259" aria-hidden="true" tabindex="-1"></a>      d<span class="op">.</span><span class="at">y</span> <span class="op">=</span> size<span class="op">.</span><span class="at">h</span> <span class="op">/</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb5-260"><a href="#cb5-260" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> d<span class="op">.</span><span class="at">y</span><span class="op">;</span></span>
+<span id="cb5-261"><a href="#cb5-261" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb5-262"><a href="#cb5-262" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">attr</span>(<span class="st">"cx"</span><span class="op">,</span> (d) <span class="kw">=&gt;</span> {</span>
+<span id="cb5-263"><a href="#cb5-263" aria-hidden="true" tabindex="-1"></a>      d<span class="op">.</span><span class="at">x</span> <span class="op">=</span> <span class="fu">xScale</span>(d[date])<span class="op">;</span></span>
+<span id="cb5-264"><a href="#cb5-264" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> d<span class="op">.</span><span class="at">x</span><span class="op">;</span></span>
+<span id="cb5-265"><a href="#cb5-265" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb5-266"><a href="#cb5-266" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">attr</span>(<span class="st">"r"</span><span class="op">,</span> radius)</span>
+<span id="cb5-267"><a href="#cb5-267" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">attr</span>(<span class="st">"fill"</span><span class="op">,</span> <span class="st">"steelblue"</span>)</span>
+<span id="cb5-268"><a href="#cb5-268" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">attr</span>(<span class="st">"fill-opacity"</span><span class="op">,</span> <span class="fl">0.7</span>)</span>
+<span id="cb5-269"><a href="#cb5-269" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">on</span>(<span class="st">"mousemove"</span><span class="op">,</span> nodeMouseOver)</span>
+<span id="cb5-270"><a href="#cb5-270" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">on</span>(<span class="st">"mouseout"</span><span class="op">,</span> nodeMouseOut)<span class="op">;</span></span>
+<span id="cb5-271"><a href="#cb5-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-272"><a href="#cb5-272" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> simulation <span class="op">=</span> d3</span>
+<span id="cb5-273"><a href="#cb5-273" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">forceSimulation</span>()</span>
+<span id="cb5-274"><a href="#cb5-274" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">force</span>(<span class="st">"collide"</span><span class="op">,</span> d3<span class="op">.</span><span class="fu">forceCollide</span>(radius <span class="op">+</span> padding))</span>
+<span id="cb5-275"><a href="#cb5-275" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">force</span>(<span class="st">"x"</span><span class="op">,</span> d3<span class="op">.</span><span class="fu">forceX</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">x</span>)<span class="op">.</span><span class="fu">strength</span>(<span class="dv">1</span>))</span>
+<span id="cb5-276"><a href="#cb5-276" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">alphaMin</span>(<span class="fl">0.00001</span>)<span class="op">;</span></span>
+<span id="cb5-277"><a href="#cb5-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-278"><a href="#cb5-278" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (category) {</span>
+<span id="cb5-279"><a href="#cb5-279" aria-hidden="true" tabindex="-1"></a>    simulation<span class="op">.</span><span class="fu">force</span>(<span class="st">"y"</span><span class="op">,</span> d3<span class="op">.</span><span class="fu">forceY</span>((d) <span class="kw">=&gt;</span> <span class="fu">yScale</span>(d[type]))<span class="op">.</span><span class="fu">strength</span>(<span class="dv">1</span>))<span class="op">;</span></span>
+<span id="cb5-280"><a href="#cb5-280" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb5-281"><a href="#cb5-281" aria-hidden="true" tabindex="-1"></a>    simulation<span class="op">.</span><span class="fu">force</span>(<span class="st">"y"</span><span class="op">,</span> d3<span class="op">.</span><span class="fu">forceY</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">y</span>)<span class="op">.</span><span class="fu">strength</span>(<span class="dv">1</span>))<span class="op">;</span></span>
+<span id="cb5-282"><a href="#cb5-282" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-283"><a href="#cb5-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-284"><a href="#cb5-284" aria-hidden="true" tabindex="-1"></a>  simulation<span class="op">.</span><span class="fu">nodes</span>(data)<span class="op">.</span><span class="fu">on</span>(<span class="st">"tick"</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb5-285"><a href="#cb5-285" aria-hidden="true" tabindex="-1"></a>    nodes<span class="op">.</span><span class="fu">attr</span>(<span class="st">"cx"</span><span class="op">,</span> (d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">x</span>)<span class="op">.</span><span class="fu">attr</span>(<span class="st">"cy"</span><span class="op">,</span> (d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">y</span>)<span class="op">;</span></span>
+<span id="cb5-286"><a href="#cb5-286" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb5-287"><a href="#cb5-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-288"><a href="#cb5-288" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> svg<span class="op">.</span><span class="fu">node</span>()<span class="op">;</span></span>
+<span id="cb5-289"><a href="#cb5-289" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+  </details>
+  <div class="cell-output cell-output-display">
+  <div id="ojs-cell-5" data-nodetype="declaration">
+
+  </div>
+  </div>
+  </div>
   
   
   <div class="hidden" aria-hidden="true">
@@ -326,6 +552,17 @@
   </section>
 
     </main> <!-- /main -->
+    <script type="ojs-module-contents">
+    eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImRhdGFGaWxlID0gRmlsZUF0dGFjaG1lbnQoXCJkYXRhL2NvbWJpbmVkdjEwLmNzdlwiKS5jc3YoKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoicGFyc2VEYXRlID0gZDMudGltZVBhcnNlKFwiJVktJW0tJWRcIilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImRhdGEgPSBkYXRhRmlsZS5tYXAoKGQpID0+IHtcbiAgcmV0dXJuIHtcbiAgICAuLi5kLFxuICAgIERhdGU6IHBhcnNlRGF0ZShkLkRhdGUpXG4gIH07XG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC00IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiZDMgPSByZXF1aXJlKFwiZDNAdjZcIilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImJlZXN3YXJtID0gKGRhdGEsIGRhdGUsIHR5cGUpID0+IHtcbiAgLy8vLy8vIENoYXJ0IGNvbmZpZ3VyYXRpb25cbiAgY29uc3QgcmFkaXVzID0gMi41O1xuICBjb25zdCBwYWRkaW5nID0gMTtcbiAgY29uc3Qgc2l6ZSA9IHsgdzogNjAwLCBoOiA4MDAgfTtcbiAgY29uc3QgbWFyZ2luID0geyB0b3A6IDEwMCwgYm90dG9tOiAzMCwgbGVmdDogMTMwLCByaWdodDogMTAwIH07XG5cbiAgY29uc3QgY29sb3JzID0gXCIjZTZhYjAyXCI7XG5cbiAgY29uc3QgeFNjYWxlID0gZDNcbiAgICAuc2NhbGVUaW1lKClcbiAgICAucmFuZ2UoWzAsIHNpemUud10pXG4gICAgLmRvbWFpbihkMy5leHRlbnQoZGF0YSwgKGQpID0+IGQuRGF0ZSkpO1xuXG5cbiAgbGV0IGNhdGVnb3J5ID0gWy4uLm5ldyBTZXQoZGF0YS5tYXAoKGQpID0+IGRbdHlwZV0pKV07XG4gIGNhdGVnb3J5LnJldmVyc2UoKTtcblxuICAvLy8vLy8gQ2hhcnQgZHJhd2luZ1xuICBjb25zdCBzdmcgPSBkMy5zZWxlY3QoXG4gICAgRE9NLnN2ZyhcbiAgICAgIHNpemUudyArIG1hcmdpbi5sZWZ0ICsgbWFyZ2luLnJpZ2h0LFxuICAgICAgc2l6ZS5oICsgbWFyZ2luLnRvcCArIG1hcmdpbi5ib3R0b21cbiAgICApXG4gICk7XG5cbiAgY29uc3QgZyA9IHN2Z1xuICAgIC5hcHBlbmQoXCJnXCIpXG4gICAgLmF0dHIoXCJ0cmFuc2Zvcm1cIiwgYHRyYW5zbGF0ZSgke21hcmdpbi5sZWZ0fSwgJHttYXJnaW4udG9wfSlgKTtcblxuICAvLyB4IGF4aXNcbiAgY29uc3QgeEF4aXMgPSBkMy5heGlzQm90dG9tKCkuc2NhbGUoeFNjYWxlKS50aWNrcyhkMy50aW1lWWVhcik7XG4gIGcuYXBwZW5kKFwiZ1wiKVxuICAgIC5hdHRyKFwidHJhbnNmb3JtXCIsIGB0cmFuc2xhdGUoMCwgJHtzaXplLmggLSBtYXJnaW4udG9wfSlgKVxuICAgIC5jYWxsKHhBeGlzKVxuICAgIC5zZWxlY3QoXCIuZG9tYWluXCIpXG4gICAgLnJlbW92ZSgpO1xuXG4gIC8vIHkgc2NhbGVcbiAgY29uc3QgeVNjYWxlID0gZDNcbiAgICAuc2NhbGVQb2ludCgpXG4gICAgLmRvbWFpbihjYXRlZ29yeSlcbiAgICAucmFuZ2UoWzAsIHNpemUuaCAtIG1hcmdpbi50b3AgLSBtYXJnaW4uYm90dG9tXSk7XG4gIGNvbnN0IHlBeGlzID0gZDMuYXhpc0xlZnQoKS5zY2FsZSh5U2NhbGUpO1xuXG4gIGcuYXBwZW5kKFwiZ1wiKVxuICAgIC5hdHRyKFwidHJhbnNmb3JtXCIsIGB0cmFuc2xhdGUoMCwwKWApXG4gICAgLmNhbGwoeUF4aXMpXG4gICAgLnNlbGVjdChcIi5kb21haW5cIilcbiAgICAucmVtb3ZlKCk7XG5cbiAgLy9Ub29sdGlwXG4gIGNvbnN0IHRvb2xUaXAgPSBkMy5zZWxlY3QoXCJib2R5XCIpLmFwcGVuZChcImRpdlwiKS5hdHRyKFwiY2xhc3NcIiwgXCJ0b29sVGlwXCIpO1xuXG4gIC8vIG1vdXNlb3ZlciBmdW5jdGlvblxuXG4gIGNvbnN0IGZvcm1hdERhdGUgPSBkMy50aW1lRm9ybWF0KFwiJWQgJWIgJVlcIik7XG5cbiAgZnVuY3Rpb24gbm9kZU1vdXNlT3ZlcihldmVudCwgZCkge1xuICAgIHRvb2xUaXBcbiAgICAgIC5zdHlsZShcImxlZnRcIiwgZXZlbnQucGFnZVggKyAxOCArIFwicHhcIilcbiAgICAgIC5zdHlsZShcInRvcFwiLCBldmVudC5wYWdlWSArIDE4ICsgXCJweFwiKVxuICAgICAgLnN0eWxlKFwiZGlzcGxheVwiLCBcImJsb2NrXCIpXG4gICAgICAuaHRtbChcbiAgICAgICAgYCR7ZFtcIkxvY2F0aW9uXCJdLnRvVXBwZXJDYXNlKCl9IC0gPGVtPiR7Zm9ybWF0RGF0ZShcbiAgICAgICAgICBkW1wiRGF0ZVwiXVxuICAgICAgICApfTwvZW0+PGJyPjxzdHJvbmc+JHtkLlRpdGxlfTwvc3Ryb25nPjxicj4ke2QuVGV4dC5zbGljZSgwLCAyMDApfS4uLmBcbiAgICAgICk7XG5cbiAgICBkMy5zZWxlY3QoZXZlbnQudGFyZ2V0KS5zdHlsZShcImN1cnNvclwiLCBcInBvaW50ZXJcIik7XG5cbiAgICBkMy5zZWxlY3QoZXZlbnQudGFyZ2V0KS50cmFuc2l0aW9uKCkuYXR0cihcImZpbGxcIiwgXCIjQTgyMzRFXCIpLmF0dHIoXCJyXCIsIDEwKTtcbiAgfVxuXG4gIC8vIG1vdXNlb3V0IGZ1bmN0aW9uXG4gIGZ1bmN0aW9uIG5vZGVNb3VzZU91dChldmVudCwgZCkge1xuICAgIC8vIEhpZGUgdG9vbHRpcCBvbiBtb3VzZSBvdXRcbiAgICB0b29sVGlwLnN0eWxlKFwiZGlzcGxheVwiLCBcIm5vbmVcIik7IC8vIEhpZGUgdG9vbFRpcFxuXG4gICAgZDMuc2VsZWN0KGV2ZW50LnRhcmdldCkuc3R5bGUoXCJjdXJzb3JcIiwgXCJkZWZhdWx0XCIpO1xuXG4gICAgZDMuc2VsZWN0KGV2ZW50LnRhcmdldClcbiAgICAgIC50cmFuc2l0aW9uKClcbiAgICAgIC5hdHRyKFwiZmlsbFwiLCBcIm9yYW5nZVwiKVxuICAgICAgLmF0dHIoXCJyXCIsIHJhZGl1cyk7XG4gIH1cblxuICAvLyBjaXJjbGVzXG4gIGNvbnN0IGJlZSA9IGdcbiAgICAuYXBwZW5kKFwiZ1wiKVxuICAgIC5hdHRyKFwiY2xhc3NcIiwgXCJiZWVcIilcbiAgICAuYXR0cihcInRyYW5zZm9ybVwiLCBgdHJhbnNsYXRlKDAsMClgKTtcblxuICBjb25zdCBub2RlcyA9IGJlZVxuICAgIC5zZWxlY3RBbGwoXCJjaXJjbGVcIilcbiAgICAuZGF0YShkYXRhKVxuICAgIC5lbnRlcigpXG4gICAgLmFwcGVuZChcImNpcmNsZVwiKVxuICAgIC5hdHRyKFwiY2xhc3NcIiwgXCJub2RlXCIpXG4gICAgLmF0dHIoXCJjeVwiLCAoZCkgPT4ge1xuICAgICAgZC55ID0gc2l6ZS5oIC8gMjtcbiAgICAgIHJldHVybiBkLnk7XG4gICAgfSlcbiAgICAuYXR0cihcImN4XCIsIChkKSA9PiB7XG4gICAgICBkLnggPSB4U2NhbGUoZFtkYXRlXSk7XG4gICAgICByZXR1cm4gZC54O1xuICAgIH0pXG4gICAgLmF0dHIoXCJyXCIsIHJhZGl1cylcbiAgICAuYXR0cihcImZpbGxcIiwgXCJzdGVlbGJsdWVcIilcbiAgICAuYXR0cihcImZpbGwtb3BhY2l0eVwiLCAwLjcpXG4gICAgLm9uKFwibW91c2Vtb3ZlXCIsIG5vZGVNb3VzZU92ZXIpXG4gICAgLm9uKFwibW91c2VvdXRcIiwgbm9kZU1vdXNlT3V0KTtcblxuICBsZXQgc2ltdWxhdGlvbiA9IGQzXG4gICAgLmZvcmNlU2ltdWxhdGlvbigpXG4gICAgLmZvcmNlKFwiY29sbGlkZVwiLCBkMy5mb3JjZUNvbGxpZGUocmFkaXVzICsgcGFkZGluZykpXG4gICAgLmZvcmNlKFwieFwiLCBkMy5mb3JjZVgoKGQpID0+IGQueCkuc3RyZW5ndGgoMSkpXG4gICAgLmFscGhhTWluKDAuMDAwMDEpO1xuXG4gIGlmIChjYXRlZ29yeSkge1xuICAgIHNpbXVsYXRpb24uZm9yY2UoXCJ5XCIsIGQzLmZvcmNlWSgoZCkgPT4geVNjYWxlKGRbdHlwZV0pKS5zdHJlbmd0aCgxKSk7XG4gIH0gZWxzZSB7XG4gICAgc2ltdWxhdGlvbi5mb3JjZShcInlcIiwgZDMuZm9yY2VZKChkKSA9PiBkLnkpLnN0cmVuZ3RoKDEpKTtcbiAgfVxuXG4gIHNpbXVsYXRpb24ubm9kZXMoZGF0YSkub24oXCJ0aWNrXCIsICgpID0+IHtcbiAgICBub2Rlcy5hdHRyKFwiY3hcIiwgKGQpID0+IGQueCkuYXR0cihcImN5XCIsIChkKSA9PiBkLnkpO1xuICB9KTtcblxuICByZXR1cm4gc3ZnLm5vZGUoKTtcbn1cblxuIn1dfQ==
+    </script>
+    <script type="module">
+    if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+    window._ojs.paths.runtimeToDoc = "../..";
+    window._ojs.paths.runtimeToRoot = "../..";
+    window._ojs.paths.docToRoot = "";
+    window._ojs.selfContained = false;
+    window._ojs.runtime.interpretFromScriptTags();
+    </script>
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
@@ -736,7 +973,7 @@
     });
     </script>
     </div> <!-- /content -->
-    <script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","loop":false,"openEffect":"zoom"});
+    <script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","selector":".lightbox"});
     window.onload = () => {
       lightboxQuarto.on('slide_before_load', (data) => {
         const { slideIndex, slideNode, slideConfig, player, trigger } = data;

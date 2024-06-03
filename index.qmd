@@ -69,6 +69,7 @@ project-description: "This is project undertaken by the 2023-2024 Fellows cohort
 
 <p class="change"><marka>CESTA is committed to collaborative, open, inclusive, and ethical scholarship. We seek to set</marka> a standard for best practices in all our endeavors.<marka> We encourage experimentation, flexible thinking, and productive risk-taking in the pursuit of excellence in digital research. Through our major research projects, fellowship and assistantship programs, seminars, workshops and informal initiatives, CESTA is dedicated to nurturing, training and professionalizing scholars of the future from a variety of disciplines, who will learn how to ask and answer data-driven questions focused on cultural, environmental, historical, social, and textual issues."</marka></p>
 
+
 <style>
 /* https://max.hn/thoughts/how-to-create-a-highlighter-marker-effect-in-css */
 p.change markr {
@@ -133,6 +134,159 @@ p.change marka {
 | 2020 |   178  | 12  |  7 |   5    |
 
 
+## Events Over the Years
+
+```{ojs}
+dataFile = FileAttachment("data/combinedv10.csv").csv()
+```
+
+```{ojs}
+parseDate = d3.timeParse("%Y-%m-%d")
+```
+
+```{ojs}
+data = dataFile.map((d) => {
+  return {
+    ...d,
+    Date: parseDate(d.Date)
+  };
+})
+```
+```{ojs}
+d3 = require("d3@v6")
+```
+
+```{ojs}
+beeswarm = (data, date, type) => {
+  ////// Chart configuration
+  const radius = 2.5;
+  const padding = 1;
+  const size = { w: 600, h: 800 };
+  const margin = { top: 100, bottom: 30, left: 130, right: 100 };
+
+  const colors = "#e6ab02";
+
+  const xScale = d3
+    .scaleTime()
+    .range([0, size.w])
+    .domain(d3.extent(data, (d) => d.Date));
 
 
-## People
+  let category = [...new Set(data.map((d) => d[type]))];
+  category.reverse();
+
+  ////// Chart drawing
+  const svg = d3.select(
+    DOM.svg(
+      size.w + margin.left + margin.right,
+      size.h + margin.top + margin.bottom
+    )
+  );
+
+  const g = svg
+    .append("g")
+    .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+  // x axis
+  const xAxis = d3.axisBottom().scale(xScale).ticks(d3.timeYear);
+  g.append("g")
+    .attr("transform", `translate(0, ${size.h - margin.top})`)
+    .call(xAxis)
+    .select(".domain")
+    .remove();
+
+  // y scale
+  const yScale = d3
+    .scalePoint()
+    .domain(category)
+    .range([0, size.h - margin.top - margin.bottom]);
+  const yAxis = d3.axisLeft().scale(yScale);
+
+  g.append("g")
+    .attr("transform", `translate(0,0)`)
+    .call(yAxis)
+    .select(".domain")
+    .remove();
+
+  //Tooltip
+  const toolTip = d3.select("body").append("div").attr("class", "toolTip");
+
+  // mouseover function
+
+  const formatDate = d3.timeFormat("%d %b %Y");
+
+  function nodeMouseOver(event, d) {
+    toolTip
+      .style("left", event.pageX + 18 + "px")
+      .style("top", event.pageY + 18 + "px")
+      .style("display", "block")
+      .html(
+        `${d["Location"].toUpperCase()} - <em>${formatDate(
+          d["Date"]
+        )}</em><br><strong>${d.Title}</strong><br>${d.Text.slice(0, 200)}...`
+      );
+
+    d3.select(event.target).style("cursor", "pointer");
+
+    d3.select(event.target).transition().attr("fill", "#A8234E").attr("r", 10);
+  }
+
+  // mouseout function
+  function nodeMouseOut(event, d) {
+    // Hide tooltip on mouse out
+    toolTip.style("display", "none"); // Hide toolTip
+
+    d3.select(event.target).style("cursor", "default");
+
+    d3.select(event.target)
+      .transition()
+      .attr("fill", "orange")
+      .attr("r", radius);
+  }
+
+  // circles
+  const bee = g
+    .append("g")
+    .attr("class", "bee")
+    .attr("transform", `translate(0,0)`);
+
+  const nodes = bee
+    .selectAll("circle")
+    .data(data)
+    .enter()
+    .append("circle")
+    .attr("class", "node")
+    .attr("cy", (d) => {
+      d.y = size.h / 2;
+      return d.y;
+    })
+    .attr("cx", (d) => {
+      d.x = xScale(d[date]);
+      return d.x;
+    })
+    .attr("r", radius)
+    .attr("fill", "steelblue")
+    .attr("fill-opacity", 0.7)
+    .on("mousemove", nodeMouseOver)
+    .on("mouseout", nodeMouseOut);
+
+  let simulation = d3
+    .forceSimulation()
+    .force("collide", d3.forceCollide(radius + padding))
+    .force("x", d3.forceX((d) => d.x).strength(1))
+    .alphaMin(0.00001);
+
+  if (category) {
+    simulation.force("y", d3.forceY((d) => yScale(d[type])).strength(1));
+  } else {
+    simulation.force("y", d3.forceY((d) => d.y).strength(1));
+  }
+
+  simulation.nodes(data).on("tick", () => {
+    nodes.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+  });
+
+  return svg.node();
+}
+
+```
