@@ -135,6 +135,7 @@ p.change marka {
 
 
 ## Events Over the Years
+[Link to the full screen visualization](https://observablehq.com/@cncoleman/cesta-events-over-the-years)
 
 ```{ojs}
 dataFile = FileAttachment("data/combinedv10.csv").csv()
