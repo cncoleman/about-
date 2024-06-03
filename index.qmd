@@ -290,3 +290,6 @@ beeswarm = (data, date, type) => {
 }
 
 ```
+
+<iframe width="100%" height="105" frameborder="0"
+  src="https://observablehq.com/embed/feb1b469be128bc5@558?cells=beeswarm&api_key=b3ad3ea86efa7b0ef7cc56348d982d7417fb2ce9"></iframe>
