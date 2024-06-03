@@ -135,34 +135,23 @@ p.change marka {
 
 
 ## Events Over the Years
-[Link to the full screen visualization](https://observablehq.com/@cncoleman/cesta-events-over-the-years)
+[Link to the full screen visualization](/cesta-events-over-the-years)
 
 ```{ojs}
+d3 = require("d3@v6")
 dataFile = FileAttachment("data/combinedv10.csv").csv()
-```
-
-```{ojs}
 parseDate = d3.timeParse("%Y-%m-%d")
-```
-
-```{ojs}
 data = dataFile.map((d) => {
   return {
     ...d,
     Date: parseDate(d.Date)
   };
 })
-```
-```{ojs}
-d3 = require("d3@v6")
-```
-
-```{ojs}
 beeswarm = (data, date, type) => {
   ////// Chart configuration
   const radius = 2.5;
   const padding = 1;
-  const size = { w: 600, h: 800 };
+  const size = { w: 500, h: 800 };
   const margin = { top: 100, bottom: 30, left: 130, right: 100 };
 
   const colors = "#e6ab02";
@@ -206,6 +195,9 @@ beeswarm = (data, date, type) => {
   g.append("g")
     .attr("transform", `translate(0,0)`)
     .call(yAxis)
+    .selectAll("text")
+    .style("font-size", "12px") // Set font size for y-axis tick labels
+    .style("font-weight", "bold")
     .select(".domain")
     .remove();
 
@@ -290,16 +282,29 @@ beeswarm = (data, date, type) => {
   return svg.node();
 }
 
+visualization = beeswarm(data, "Date", "Method")
 ```
-```{=html}
-<iframe width="100%" height="105" frameborder="0"
-  src="https://observablehq.com/@cncoleman/cesta-events-over-the-years"></iframe>
-```
+<style> 
+.toolTip {
+  position: absolute;
+  display: none;
+  min-width: 30px;
+  max-width: 350px;
+  border-radius: 4px;
+  height: auto;
+  background: rgba(250,250,250, 0.9);
+  border: 1px solid #DDD;
+  padding: 4px 8px;
+  font-size: .85rem;
+  text-align: left;
+  z-index: 1000;
+}
+</style>
 
 ## A CESTA Event Network
 [Link to the full screen visualization](https://www.junyitao.com/research/external_htmls/cesta_event_vis/)
 
 
 ```{=html}
-<iframe src="https://www.junyitao.com/research/external_htmls/cesta_event_vis/" width="500" height="400"></iframe>
+<iframe src="https://www.junyitao.com/research/external_htmls/cesta_event_vis/" width="800" height="800"></iframe>
 ```
