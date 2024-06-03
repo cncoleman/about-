@@ -291,6 +291,11 @@ beeswarm = (data, date, type) => {
 }
 
 ```
-
+```{=html}
 <iframe width="100%" height="105" frameborder="0"
-  src="https://observablehq.com/embed/feb1b469be128bc5@558?cells=beeswarm&api_key=b3ad3ea86efa7b0ef7cc56348d982d7417fb2ce9"></iframe>
+  src="https://observablehq.com/@cncoleman/cesta-events-over-the-years"></iframe>
+```
+
+```{=html}
+<iframe src="https://www.junyitao.com/research/external_htmls/cesta_event_vis/" width="500" height="400"></iframe>
+```
